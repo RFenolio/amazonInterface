@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Amazon Interface</title>
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+	<script src="services.js"></script>
+	<script src="app.js"></script>
+
+
+
+	<div ng-app="amazon" ng-controller="amazonCtrl">
+		<form>
+		  <input ng-model="keywords" type="text" name="keywords">
+		  <button ng-click="search()" value="Search">Search</button>
+		</form>
+		<ul>
+			<li ng-repeat="item in products">
+				<a href={{item.DetailPageURL[0]}}>
+					<h3>{{item.ItemAttributes[0].Title[0]}}</h3>
+					<img src={{item.ImageSets[0].ImageSet[0].MediumImage[0].URL[0]}}>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
