@@ -21,6 +21,4 @@ module.exports.products = function (req, res) {
 	  	res.end();
 	  }
 	});
-	
-	var dummyData = ['Hat', 'Book', 'Ant Traps', 'Cup']
 }
