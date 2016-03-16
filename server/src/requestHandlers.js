@@ -2,8 +2,6 @@ var amazon = require('amazon-product-api');
 
 module.exports.products = function (req, res) {
 
-	console.log(req.body);
-
 	var client = amazon.createClient({
 	  awsId: process.env.AWS_ACCESS_KEY_ID,
 	  awsSecret: process.env.AWS_SECRET_KEY,
